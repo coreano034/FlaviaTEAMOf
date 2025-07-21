@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mensagem para Minha Princesa 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Pacifico&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px #c94f4f;
+    }
+    button {
+      background: linear-gradient(45deg, #ff6a6a, #ff94c2);
+      border: none;
+      padding: 18px 40px;
+      font-size: 1.6rem;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(255, 105, 135, 0.6);
+      transition: all 0.3s ease;
+      font-weight: bold;
+      font-family: 'Sacramento', cursive;
+    }
+    button:hover {
+      box-shadow: 0 12px 20px rgba(255, 105, 135, 0.9);
+      transform: scale(1.05);
+    }
+    #message {
+      margin-top: 30px;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px 30px;
+      border-radius: 25px;
+      font-size: 1.4rem;
+      line-height: 1.7;
+      color: #fff;
+      text-shadow: 1px 1px 2px #9a2e2e;
+      display: none;
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pro amor da minha vida 💖</h1>
+  <button id="openBtn">Clica aqui, meu amor!</button>
+
+  <div id="message">
+    <p>Oi tudo bem, aqui é o seu amor Gabriel, bom sinceramente quero agradecer cada segundo que estamos passando com você é mágico.</p>
+    <p>Bom quero falar o quanto eu agradeço você por ter aparecido aquele dia que eu cheguei na call antes de eu clicar para entrar naquela call eu já sabia que seria você. O jeito que você me recebeu, a cada sorriso seu, você me fez perder o medo total.</p>
+    <p>Eu só queria ficar mais cada segundo naquela call, escutando sua voz, que me deixa tipo muito bem.</p>
+    <p>Eu de verdade, acredita se quiser, nunca senti tanta vontade em tentar com alguém igual estou tentando com você.</p>
+    <p>Você completa cada dia da minha vida, você é minha princesa. Não precisei te ver, não precisei te tocar, não precisei ver o seu corpo, me apaixonei pela mulher que eu encontrei e quero estar sempre com você, você é minha princesa.</p>
+    <p>Eu quero muito te conhecer, te amar pra sempre, nunca espere uma traição minha, nunca espere nada de mal.</p>
+    <p>Quero te fazer feliz pelo resto da minha vida, saiba que quero estar em cada segundo da minha vida.</p>
+    <p>Eu quero sim casar com você e formar uma família. Eu espero do fundo do meu coração que seja tudo comigo, quero ser seu primeiro amor verdadeiro.</p>
+    <p>Então saiba que eu amo você infinitamente, vou te fazer a pessoa mais feliz do mundo.</p>
+    <p>Obrigado meu amor por todos os dias e quero continuar com você por toda essa vida.</p>
+    <p>Vamos crescer juntos, e vamos vencer juntos.</p>
+  </div>
+
+  <script>
+    const btn = document.getElementById('openBtn');
+    const msg = document.getElementById('message');
+
+    btn.addEventListener('click', () => {
+      msg.style.display = 'block';
+      btn.style.display = 'none';
+      // Suavizar a aparição do texto
+      msg.style.opacity = 0;
+      let opacity = 0;
+      const fadeIn = setInterval(() => {
+        if (opacity >= 1) {
+          clearInterval(fadeIn);
+        }
+        opacity += 0.05;
+        msg.style.opacity = opacity;
+      }, 40);
+    });
+  </script>
+</body>
+</html>
